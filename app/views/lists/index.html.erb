@@ -1,12 +1,16 @@
 <h1>Lists</h1>
 
 <% if @lists.any? %>
-  <%= @lists.each do |list| %>
-  <%= list.name %>
+  <div class="lists">
+    <% @lists.each do |list| %>
+    <div class="card">
+      <%= list.name %>
+    </div>
   <% end %>
+  </div>
 <% else %>
   There are no lists!
 <% end %>
 
 
-<%= link_to "Add a new list", lists_new_path %>
+<%= link_to "Add a new list", new_list_path %>
