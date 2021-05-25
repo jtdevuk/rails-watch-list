@@ -1,0 +1,12 @@
+<h1>Lists</h1>
+
+<% if @lists.any? %>
+  <%= @lists.each do |list| %>
+  <%= list.name %>
+  <% end %>
+<% else %>
+  There are no lists!
+<% end %>
+
+
+<%= link_to "Add a new list", lists_new_path %>
