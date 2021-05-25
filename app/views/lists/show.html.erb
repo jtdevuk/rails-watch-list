@@ -1,6 +1,16 @@
-<h1><%= @list.name %></h1>
-<% @bookmarks.each do |bookmark| %>
-  <%= bookmark.movie.title %>
-  <%= bookmark.comment %>
-<% end %>
+<div class="jumbotron text-white d-flex flex-column justify-content-center">
+  <h1 class="text-center"><%= @list.name %></h1>
+</div>
+<div class="container">
+  <div class="row">
+    <% @bookmarks.each do |bookmark| %>
+      <div class="row justify-content-around">
+        <div class="card col-12 col-lg-4 text-center m-2">
+        <h3><%= bookmark.movie.title %></h3>
+        <p><%= bookmark.movie.overview %></p>
+        <p><i class="fas fa-quote-left p-2"></i><%= bookmark.comment %><i class="fas fa-quote-right p-2"></i></p>
+      </div>
+    <% end %>
+  </div>
+</div>
 <%= link_to "Add a new movie to this list", new_list_bookmark_path(@list) %>

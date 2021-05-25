@@ -1,16 +1,20 @@
-<h1>Lists</h1>
-
+<div class="jumbotron text-white d-flex flex-column justify-content-center">
+  <h1 class="text-center">Save your favourite movies</h1>
+</div>
+<div class="container">
+<h3 class="m-3">My Lists</h3>
 <% if @lists.any? %>
-  <div class="lists">
+  <div class="row justify-content-around">
     <% @lists.each do |list| %>
-    <div class="card">
-      <%= list.name %>
+    <div class="card col-12 col-lg-4 text-center p-5">
+      <%= link_to list.name, list_path(list) %>
     </div>
   <% end %>
   </div>
 <% else %>
   There are no lists!
 <% end %>
+</div>
 
 
 <%= link_to "Add a new list", new_list_path %>
