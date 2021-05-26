@@ -9,6 +9,7 @@
         <h3><%= bookmark.movie.title %></h3>
         <p><%= bookmark.movie.overview %></p>
         <p><i class="fas fa-quote-left p-2"></i><%= bookmark.comment %><i class="fas fa-quote-right p-2"></i></p>
+        <%= link_to "Delete", list_bookmark_path(bookmark), method: :delete %>
       </div>
     <% end %>
   </div>

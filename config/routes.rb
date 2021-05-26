@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :lists do
-    # get "/bookmarks/new", to: "bookmarks#new"
-    resources :bookmarks, only: [:new, :create]
+    resources :bookmarks, only: [:new, :create, :show]
   end
+  delete "bookmarks/:id", to: "bookmarks#destroy"
 end
