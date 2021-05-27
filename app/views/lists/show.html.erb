@@ -2,16 +2,15 @@
   <h1 class="text-center"><%= @list.name %></h1>
 </div>
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-around">
     <% @bookmarks.each do |bookmark| %>
-      <div class="row justify-content-around">
-        <div class="card col-12 col-lg-4 text-center m-2">
-        <p class="bookmark-card" style="background-image: url('<%= bookmark.movie.poster_url %>')"></p>
-        <h3><%= bookmark.movie.title %></h3>
-        <p><%= bookmark.movie.overview %></p>
-        <p><i class="fas fa-quote-left p-2"></i><%= bookmark.comment %><i class="fas fa-quote-right p-2"></i></p>
-        <%= link_to "Delete", list_bookmark_path(bookmark), method: :delete %>
-      </div>
+        <div class="card col-12 col-lg-5 text-center m-3">
+          <p class="bookmark-card" style="background-image: url('<%= bookmark.movie.poster_url %>')"></p>
+          <h3><%= bookmark.movie.title %></h3>
+          <p><%= bookmark.movie.overview %></p>
+          <p><i class="fas fa-quote-left p-2"></i><%= bookmark.comment %><i class="fas fa-quote-right p-2"></i></p>
+          <%= link_to "Delete", list_bookmark_path(bookmark), method: :delete %>
+        </div>
     <% end %>
   </div>
 </div>
