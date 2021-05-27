@@ -6,8 +6,15 @@
 }
 
 .bookmark-card {
+  position: relative;
   height: 200px;
   width: 100%;
   background-size: cover;
   background-position: top;
+}
+
+.delete-link {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }

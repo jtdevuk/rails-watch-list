@@ -9,7 +9,10 @@
           <h3><%= bookmark.movie.title %></h3>
           <p><%= bookmark.movie.overview %></p>
           <p><i class="fas fa-quote-left p-2"></i><%= bookmark.comment %><i class="fas fa-quote-right p-2"></i></p>
-          <%= link_to "Delete", list_bookmark_path(bookmark), method: :delete %>
+          <%= link_to delete_bookmark_path(bookmark), method: :delete, data: {confirm: "Are you sure?"}, class: "m-3 text-danger delete-link" do %>
+            <%= icon('fas', 'trash') %>
+          <% end %>
+          
         </div>
     <% end %>
   </div>
