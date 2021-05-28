@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWatchList</title>
+    <title>Movie Watch List</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <div class="navbar"></div>
+    <%= render "/shared/navbar" %>
     <%= yield %>
   </body>
 </html>
