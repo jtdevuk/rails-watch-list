@@ -11,12 +11,11 @@
           <p><i class="fas fa-quote-left p-2"></i><%= bookmark.comment %><i class="fas fa-quote-right p-2"></i></p>
           <%= link_to delete_bookmark_path(bookmark), method: :delete, data: {confirm: "Are you sure?"}, class: "m-3 text-danger delete-link" do %>
             <%= icon('fas', 'trash') %>
-          <% end %>
-          
+          <% end %>          
         </div>
     <% end %>
   </div>
 </div>
 <div class="text-center">
-  <%= link_to "Add a new movie to this list", new_list_bookmark_path(@list), class: "btn btn-warning" %>
+  <%= link_to "Add a new movie to this list", new_list_bookmark_path(@list), class: "btn btn-warning m-3" %>
 </div>

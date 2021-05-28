@@ -1,8 +1,8 @@
 .jumbotron {
   height: 400px;
-  background-image: url("lists.jpg");
   background-position: top;
   background-size: cover;
+  background-image: asset-url('lists.jpg');
 }
 
 .bookmark-card {
