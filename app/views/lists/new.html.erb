@@ -1,11 +1,13 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-8 m-3">
+    <div class="col-8 m-5 form p-5">
       <h1 class="text-center m-3">Create a new list</h1>
       <%= simple_form_for @list do |f| %>
         <%= f.input :name %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit %>
+        <div class="text-center">
+          <%= f.button :submit, class: "myButton" %>
+        </div>
       <% end %>
     </div>
   </div>
